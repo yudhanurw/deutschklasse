@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portal belajar mandiri Bahasa Jerman kelas XII ULW SMKN 1 Sewon: video pengantar, rangkuman, dan latihan ber-auto-koreksi.">
+<meta name="theme-color" content="#0D6A6D">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D6A6D'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='28' font-weight='bold' fill='white' text-anchor='middle'%3EDE%3C/text%3E%3C/svg%3E">
+<title>Deutschklasse XII ULW</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"Bricolage Grotesque"','"Trebuchet MS"','system-ui','sans-serif'],
+        sans: ['"Source Sans 3"','"Segoe UI"','system-ui','-apple-system','sans-serif'],
+        mono: ['"IBM Plex Mono"','ui-monospace','SFMono-Regular','Menlo','monospace']
+      },
+      colors: {
+        paper:'#E7ECEB',   paperD:'#0D1615',
+        surf:'#FBFCFC',    surfD:'#16211F',
+        surf2:'#F0F4F3',   surf2D:'#1D2A28',
+        ink:'#13201F',     inkD:'#E6EDEC',
+        ink2:'#4C5D5C',    ink2D:'#A2B2B0',
+        ink3:'#7B8B8A',    ink3D:'#788987',
+        line:'#D1DAD9',    lineD:'#293836',
+        lineS:'#B6C3C2',   lineSD:'#3A4B49',
+        acc:'#0D6A6D',     accD:'#4FBFC2',
+        accInk:'#0A5457',  accInkD:'#7BD4D6',
+        accSoft:'#DCECEC', accSoftD:'#12312F',
+        gold:'#9B6A08',    goldD:'#E2B75E',
+        goldBg:'#FAEFD5',  goldBgD:'#32280F',
+        goldLine:'#E2C68A',goldLineD:'#5C4A1D',
+        ok:'#246A45',      okD:'#6DC392',
+        okBg:'#DEF0E5',    okBgD:'#0F2E1F',
+        no:'#AE382B',      noD:'#EC8C7E',
+        noBg:'#FAE3DF',    noBgD:'#331916'
+      }
+    }
+  }
+};
+</script>
+
+<script>
+/* sinkronkan mode gelap: hormati pilihan eksplisit pembaca, jika tidak ikuti sistem */
+(function(){
+  var root = document.documentElement;
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function apply(){
+    var t = root.getAttribute('data-theme');
+    var dark = (t === 'dark') || (t !== 'light' && mq.matches);
+    root.classList.toggle('dark', dark);
+  }
+  apply();
+  try { mq.addEventListener('change', apply); } catch(e){ if(mq.addListener) mq.addListener(apply); }
+  try { new MutationObserver(apply).observe(root, {attributes:true, attributeFilter:['data-theme']}); } catch(e){}
+})();
+</script>
+
+<style>
+:root{
+  --bg:#E7ECEB; --surface:#FBFCFC; --surface-2:#F0F4F3;
+  --ink:#13201F; --ink-2:#4C5D5C; --ink-3:#7B8B8A;
+  --line:#D1DAD9; --line-strong:#B6C3C2;
+  --accent:#0D6A6D; --gold:#9B6A08; --gold-bg:#FAEFD5; --gold-line:#E2C68A;
+}
+.dark{
+  --bg:#0D1615; --surface:#16211F; --surface-2:#1D2A28;
+  --ink:#E6EDEC; --ink-2:#A2B2B0; --ink-3:#788987;
+  --line:#293836; --line-strong:#3A4B49;
+  --accent:#4FBFC2; --gold:#E2B75E; --gold-bg:#32280F; --gold-line:#5C4A1D;
+}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
+  font-size:16.5px; line-height:1.6; -webkit-text-size-adjust:100%;
+}
+:focus-visible{outline:2.5px solid var(--accent);outline-offset:2px;border-radius:3px}
+h1,h2,h3,h4{text-wrap:balance}
+
+/* ---- gaya isi rangkuman (tabel, contoh, callout) ---- */
+.prose-de .de{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-weight:500}
+.prose-de .hi{color:var(--gold);font-weight:600}
+.prose-de .dim{color:var(--ink-3)}
+.prose-de .note{color:var(--ink-2);font-size:.96rem}
+.prose-de p + p{margin-top:9px}
+.prose-de ul.bul{margin:10px 0 0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:7px}
+.prose-de ul.bul li{position:relative;padding-left:18px;font-size:.95rem}
+.prose-de ul.bul li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:2px;background:var(--accent)}
+.prose-de .tscroll{overflow-x:auto;margin-top:12px;border:1px solid var(--line);border-radius:6px;-webkit-overflow-scrolling:touch}
+.prose-de table{border-collapse:collapse;width:100%;font-size:.9rem}
+.prose-de th,.prose-de td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.prose-de thead th{background:var(--surface-2);font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-weight:600;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
+.prose-de tbody tr:last-child td{border-bottom:none}
+.prose-de td.de,.prose-de th.de{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+.prose-de tr.mark td{background:var(--gold-bg)}
+.prose-de .ex{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.89rem;line-height:1.55;background:var(--surface-2);border:1px solid var(--line);border-radius:4px;padding:9px 12px;margin-top:11px;display:flex;flex-direction:column;gap:5px}
+.prose-de .ex .id{font-family:inherit;font-family:"Source Sans 3",system-ui,sans-serif;color:var(--ink-3);font-size:.85rem}
+.prose-de .callout{margin-top:12px;border:1px solid var(--gold-line);background:var(--gold-bg);border-radius:4px;padding:11px 13px;font-size:.92rem}
+.prose-de .callout .lbl{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:4px}
+
+@media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<noscript><p style="padding:24px;max-width:40rem">Halaman ini butuh JavaScript aktif. Nyalakan JavaScript di browser lalu muat ulang.</p></noscript>
+
+<!-- React 18 (UMD) dari CDN. Tidak perlu Node.js / NPM / Vite. -->
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+<script>
+/* Kalau CDN utama gagal, coba CDN cadangan sebelum menyerah. */
+function bootDeutschklasse(start){
+  function ready(){ return window.React && window.ReactDOM && window.ReactDOM.createRoot; }
+  function add(src, next){
+    var s = document.createElement("script");
+    s.src = src; s.crossOrigin = "anonymous";
+    s.onload = next; s.onerror = next;
+    document.head.appendChild(s);
+  }
+  function fail(){
+    document.getElementById("root").innerHTML =
+      '<div style="padding:28px;max-width:40rem;font-family:system-ui;line-height:1.6">' +
+      '<h2 style="margin:0 0 8px">Halaman gagal dimuat</h2>' +
+      '<p style="margin:0;color:#4C5D5C">Koneksi internetmu mungkin sedang putus atau jaringan ' +
+      'sekolah memblokir sumber halaman ini. Coba muat ulang, atau buka lewat jaringan lain.</p></div>';
+  }
+  if(ready()) return start();
+  add("https://unpkg.com/react@18.3.1/umd/react.production.min.js", function(){
+    add("https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js", function(){
+      if(ready()) start(); else fail();
+    });
+  });
+}
+</script>
+
+<script>
+function startDeutschklasse(){
+"use strict";
+
+var h = React.createElement;
+var useState = React.useState, useEffect = React.useEffect, useRef = React.useRef;
+
+var KIT_URL = "https://claude.ai/code/artifact/8a392d6c-edda-4385-8c59-4a622cb6a161";
+
+/* =====================================================================
+   DATA MATERI
+   ===================================================================== */
+var TOPICS = [
+{
+  id:"artikel", num:"01", tag:"Grammatik", time:"11 menit",
+  title:"Kata Benda & Artikel Dasar",
+  desc:"Gender der / die / das, artikel tak tentu ein / eine / ein, dan posisi Nominativ.",
+  lede:"Fondasi dari semua materi berikutnya. Kalau gender kata bendanya sudah nempel, materi Akkusativ nanti terasa gampang banget.",
+  videos:[{id:"4cRAhte5oe0", cap:"Gender kata benda & artikel dasar"}],
+  summary:[
+    {h:"Setiap kata benda punya gender", html:
+      '<p class="note">Di bahasa Indonesia, "meja" ya "meja". Di bahasa Jerman setiap kata benda bawa <b>gender</b>, dan gender itu menentukan artikelnya. Ada tiga, plus satu bentuk jamak.</p>'+
+      '<div class="tscroll"><table><thead><tr><th>Gender</th><th>Artikel tentu</th><th>Contoh</th></tr></thead><tbody>'+
+      '<tr><td><b>Maskulin</b></td><td class="de"><b>der</b></td><td class="de">der Computer · der Vater · der Apfel</td></tr>'+
+      '<tr><td><b>Feminin</b></td><td class="de"><b>die</b></td><td class="de">die Tasche · die Mutter · die Limonade</td></tr>'+
+      '<tr><td><b>Netral</b></td><td class="de"><b>das</b></td><td class="de">das Auto · das Fenster · das Buch</td></tr>'+
+      '<tr><td><b>Plural</b></td><td class="de"><b>die</b></td><td class="de">die Freunde · die Jungs</td></tr>'+
+      '</tbody></table></div>'+
+      '<div class="callout"><span class="lbl">Tips paling penting</span>Jangan hafal <span class="de">Tasche</span> saja — hafalkan <span class="de"><b>die</b> Tasche</span> satu paket. Artikel yang salah bikin seluruh kalimat ikut salah di materi berikutnya.</div>'},
+    {h:"Artikel tentu vs artikel tak tentu", html:
+      '<p class="note"><b>Artikel tentu</b> (<span class="de">der/die/das</span>) = benda yang <i>sudah jelas mana</i> — sama seperti "itu" atau "-nya". <b>Artikel tak tentu</b> (<span class="de">ein/eine/ein</span>) = "sebuah / seorang", belum spesifik.</p>'+
+      '<div class="tscroll"><table><thead><tr><th>Gender</th><th>Bestimmter (tentu)</th><th>Unbestimmter (tak tentu)</th></tr></thead><tbody>'+
+      '<tr><td>Maskulin</td><td class="de">der Freund</td><td class="de">ein Freund</td></tr>'+
+      '<tr><td>Feminin</td><td class="de">die Freundin</td><td class="de">eine Freundin</td></tr>'+
+      '<tr><td>Netral</td><td class="de">das Auto</td><td class="de">ein Auto</td></tr>'+
+      '<tr><td>Plural</td><td class="de">die Freunde</td><td class="dim">— (tidak ada)</td></tr>'+
+      '</tbody></table></div>'+
+      '<p class="note" style="margin-top:11px">Perhatikan: maskulin dan netral sama-sama <span class="de">ein</span>. Yang beda sendiri cuma feminin, pakai <span class="de">eine</span>. Dan plural memang tidak punya bentuk tak tentu — masuk akal, "sebuah teman-teman" kan aneh.</p>'},
+    {h:"Nominativ = posisi subjek", html:
+      '<p class="note"><b>Nominativ</b> adalah posisi <b>pelaku</b> alias subjek kalimat. Di posisi ini artikel tampil apa adanya, persis seperti di kamus — belum berubah sama sekali.</p>'+
+      '<div class="ex">'+
+      '<span><b>Der</b> Computer ist teuer. <span class="id">(Komputernya mahal)</span></span>'+
+      '<span><b>Die</b> Tasche ist neu. <span class="id">(Tasnya baru)</span></span>'+
+      '<span><b>Das</b> Fenster ist sauber. <span class="id">(Jendelanya bersih)</span></span>'+
+      '<span><b>Die</b> Freunde sind nett. <span class="id">(Teman-temannya baik)</span></span>'+
+      '</div>'+
+      '<p class="note" style="margin-top:11px">Ingat baik-baik bentuk Nominativ ini. Di Materi 02 kamu akan lihat bahwa begitu benda pindah jadi <b>sasaran</b>, salah satu dari empat baris di atas berubah — dan cuma satu.</p>'},
+    {h:"Petunjuk menebak gender", html:
+      '<p class="note">Gender memang harus dihafal, tapi ada pola yang lumayan sering kepakai.</p>'+
+      '<ul class="bul">'+
+      '<li>Akhiran <span class="de"><b>-e</b></span> sering <b>feminin</b>: <span class="de">die Tasche, die Limonade, die Schule</span></li>'+
+      '<li>Akhiran <span class="de"><b>-er</b></span> untuk pelaku/alat sering <b>maskulin</b>: <span class="de">der Lehrer, der Computer, der Schlüssel</span></li>'+
+      '<li>Akhiran <span class="de"><b>-chen</b></span> selalu <b>netral</b>: <span class="de">das Mädchen</span></li>'+
+      '<li>Orang laki-laki <b>maskulin</b>, perempuan <b>feminin</b>: <span class="de">der Vater · die Mutter · der Bruder · die Freundin</span></li>'+
+      '</ul>'+
+      '<p class="note" style="margin-top:11px">Ini petunjuk, bukan hukum. Kalau ragu, buka <b>Kamus Cepat</b> di halaman depan — gendernya sudah ditulis di sana.</p>'}
+  ],
+  ex:[
+    {k:"fill", q:"__ Hund ist groß.", hint:"(Hund = maskulin · artikel tentu)", acc:[["der"]], sol:"Der Hund ist groß.", why:"Maskulin di posisi subjek memakai der."},
+    {k:"fill", q:"__ Tasche ist neu.", hint:"(Tasche = feminin · artikel tentu)", acc:[["die"]], sol:"Die Tasche ist neu.", why:"Feminin memakai die."},
+    {k:"fill", q:"__ Auto ist teuer.", hint:"(Auto = netral · artikel tentu)", acc:[["das"]], sol:"Das Auto ist teuer.", why:"Netral memakai das."},
+    {k:"fill", q:"__ Freunde sind nett.", hint:"(Freunde = plural · artikel tentu)", acc:[["die"]], sol:"Die Freunde sind nett.", why:"Plural selalu die, gender aslinya tidak berpengaruh."},
+    {k:"fill", q:"Das ist __ Apfel.", hint:"(der Apfel · artikel tak tentu)", acc:[["ein"]], sol:"Das ist ein Apfel.", why:"Maskulin tak tentu adalah ein."},
+    {k:"fill", q:"Das ist __ Freundin.", hint:"(die Freundin · artikel tak tentu)", acc:[["eine"]], sol:"Das ist eine Freundin.", why:"Feminin tak tentu adalah eine — satu-satunya yang pakai -e."},
+    {k:"fill", q:"Das ist __ Fenster.", hint:"(das Fenster · artikel tak tentu)", acc:[["ein"]], sol:"Das ist ein Fenster.", why:"Netral tak tentu juga ein, sama seperti maskulin."},
+    {k:"mc", q:"Kata benda jamak di posisi Nominativ selalu memakai artikel tentu apa?",
+      opts:["der","die","das","ein","eine"], ans:1,
+      sol:"B. die", why:"Semua kata benda jamak memakai die, dan plural tidak punya bentuk tak tentu."},
+    {k:"rf", q:"Das ist eine Computer.", ans:false, fix:["das ist ein computer"],
+      sol:"FALSCH → Das ist ein Computer.", why:"der Computer maskulin, jadi bentuk tak tentunya ein, bukan eine."}
+  ]
+},
+{
+  id:"akkusativ", num:"02", tag:"Grammatik", time:"13 menit",
+  title:"Akkusativ für Anfänger & Kata Kerja",
+  desc:"Aturan emas Akkusativ plus daftar kata kerja yang wajib diikuti objek.",
+  lede:"Inti dari seluruh portal ini. Begitu kamu paham siapa pelaku dan siapa sasaran, separuh urusan Akkusativ sudah beres.",
+  videos:[{id:"4i5rbghwRto", cap:"Akkusativ für Anfänger"}],
+  summary:[
+    {h:"Apa itu Akkusativ?", html:
+      '<p class="note">Kata benda yang jadi <b>objek langsung</b> — sasaran dari sebuah tindakan — disebut <span class="de">Akkusativobjekt</span>. Dia menjawab pertanyaan <span class="de"><b>Wen?</b></span> (siapa yang dikenai) atau <span class="de"><b>Was?</b></span> (apa yang dikenai).</p>'+
+      '<p class="note">Analogi pertemanan: <i>Roky mentraktir Yudha makan mie ayam.</i></p>'+
+      '<ul class="bul"><li><b>Roky</b> = pelaku, posisi subjek (Nominativ)</li><li><b>Yudha</b> = yang ditraktir, posisi objek (Akkusativ)</li></ul>'+
+      '<p class="note" style="margin-top:10px">Tukar posisinya jadi <i>Yudha mentraktir Roky</i>, artinya berubah total. Itulah kenapa bahasa Jerman menandai posisi ini lewat artikel.</p>'},
+    {h:"The Golden Rule", html:
+      '<div class="callout"><span class="lbl">Hafalin ini saja</span><b>Hanya kata benda Maskulin yang berubah bentuk.</b> Feminin, Netral, dan Plural tetap sama persis seperti di Materi 01.</div>'+
+      '<div class="tscroll"><table><thead><tr><th>Gender</th><th>Nominativ (subjek)</th><th>Akkusativ (objek)</th><th>Keterangan</th></tr></thead><tbody>'+
+      '<tr class="mark"><td><b>Maskulin</b></td><td class="de">der / ein / mein / kein</td><td class="de"><b>den / einen / meinen / keinen</b></td><td class="hi"><b>BERUBAH</b></td></tr>'+
+      '<tr><td>Feminin</td><td class="de">die / eine</td><td class="de">die / eine</td><td class="dim">Tetap sama</td></tr>'+
+      '<tr><td>Netral</td><td class="de">das / ein</td><td class="de">das / ein</td><td class="dim">Tetap sama</td></tr>'+
+      '<tr><td>Plural</td><td class="de">die</td><td class="de">die</td><td class="dim">Tetap sama</td></tr>'+
+      '</tbody></table></div>'},
+    {h:"Verben mit Akkusativ — kata kerja pendamping", html:
+      '<p class="note">Kata kerja berikut hampir selalu diikuti objek. Begitu ketemu salah satunya, otak kamu harus langsung nyala: <i>awas, benda maskulin di belakangnya harus berubah.</i></p>'+
+      '<div class="tscroll"><table><thead><tr><th>Verb</th><th>Arti</th><th>Contoh</th></tr></thead><tbody>'+
+      '<tr><td class="de"><b>haben</b></td><td>memiliki</td><td class="de">Sie hat <b>ein</b> Auto.</td></tr>'+
+      '<tr><td class="de"><b>brauchen</b></td><td>membutuhkan</td><td class="de">Ich brauche <b class="hi">den</b> Stift.</td></tr>'+
+      '<tr><td class="de"><b>essen</b></td><td>makan</td><td class="de">Er isst <b class="hi">einen</b> Apfel.</td></tr>'+
+      '<tr><td class="de"><b>trinken</b></td><td>minum</td><td class="de">Sie trinkt <b class="hi">einen</b> Kaffee.</td></tr>'+
+      '<tr><td class="de"><b>sehen</b></td><td>melihat</td><td class="de">Ich sehe <b class="hi">den</b> Hund.</td></tr>'+
+      '<tr><td class="de"><b>kaufen</b></td><td>membeli</td><td class="de">Wir kaufen <b>die</b> Tasche.</td></tr>'+
+      '<tr><td class="de"><b>finden</b></td><td>menemukan</td><td class="de">Ich finde <b class="hi">den</b> Schlüssel.</td></tr>'+
+      '<tr><td class="de"><b>kennen</b></td><td>mengenal</td><td class="de">Kennst du <b class="hi">den</b> Lehrer?</td></tr>'+
+      '<tr><td class="de"><b>nehmen</b></td><td>mengambil / menaiki</td><td class="de">Er nimmt <b class="hi">den</b> Bus.</td></tr>'+
+      '<tr><td class="de"><b>besuchen</b></td><td>mengunjungi</td><td class="de">Wir besuchen <b>die</b> Freunde.</td></tr>'+
+      '</tbody></table></div>'+
+      '<p class="note" style="margin-top:11px">Sembilan yang pertama itu daftar wajib hafal. Semuanya kata kerja yang kepakai tiap hari — makan, minum, beli, butuh, lihat.</p>'},
+    {h:"Kesalahan yang paling sering terjadi", html:
+      '<div class="ex"><span>❌ Ich sehe <b>der</b> Hund.</span><span>✅ Ich sehe <b class="hi">den</b> Hund.</span>'+
+      '<span class="id">Lupa mengubah maskulin adalah kesalahan nomor satu. Cek gender bendanya dulu, baru tulis artikelnya.</span></div>'}
+  ],
+  ex:[
+    {k:"fill", q:"Ich sehe __ Hund.", hint:"(der Hund)", acc:[["den","einen"]], sol:"Ich sehe den Hund. / Ich sehe einen Hund.", why:"der Hund maskulin → den atau einen."},
+    {k:"fill", q:"Yudha kauft __ Tasche.", hint:"(die Tasche)", acc:[["die","eine"]], sol:"Yudha kauft die Tasche. / eine Tasche.", why:"Feminin tidak berubah."},
+    {k:"fill", q:"Roky hat __ Auto.", hint:"(das Auto)", acc:[["das","ein"]], sol:"Roky hat das Auto. / ein Auto.", why:"Netral tidak berubah."},
+    {k:"fill", q:"Wir essen __ Apfel.", hint:"(der Apfel)", acc:[["den","einen"]], sol:"Wir essen den Apfel. / einen Apfel.", why:"der Apfel maskulin → den/einen."},
+    {k:"fill", q:"Kennst du __ Lehrer?", hint:"(der Lehrer)", acc:[["den","einen"]], sol:"Kennst du den Lehrer?", why:"kennen menuntut Akkusativ; der → den."},
+    {k:"fill", q:"Sie trinken __ Kaffee.", hint:"(der Kaffee)", acc:[["den","einen"]], sol:"Sie trinken den Kaffee. / einen Kaffee.", why:"der Kaffee maskulin → den/einen."},
+    {k:"fill", q:"Ich finde __ Schlüssel.", hint:"(der Schlüssel)", acc:[["den","einen"]], sol:"Ich finde den Schlüssel.", why:"der Schlüssel maskulin → den/einen."},
+    {k:"fill", q:"Wir besuchen __ Freunde.", hint:"(die, Plural)", acc:[["die"]], sol:"Wir besuchen die Freunde.", why:"Plural tetap die. Tidak ada bentuk eine untuk plural."},
+    {k:"fill", q:"Er nimmt __ Bus.", hint:"(der Bus)", acc:[["den","einen"]], sol:"Er nimmt den Bus.", why:"der Bus maskulin → den/einen."},
+    {k:"rf", q:"Ich kaufe der Apfel.", ans:false, fix:["ich kaufe den apfel"], sol:"FALSCH → Ich kaufe den Apfel.", why:"der Apfel berposisi objek, jadi der wajib berubah menjadi den."},
+    {k:"fill", q:"Wir trinken __ Limonade.", hint:"(die Limonade — ubah ein menjadi bentuk yang tepat)", acc:[["eine"]], sol:"Wir trinken eine Limonade.", why:"Limonade feminin, jadi tetap eine."},
+    {k:"order", q:"braucht · einen · Er · Laptop", acc:[["er braucht einen laptop"]], sol:"Er braucht einen Laptop.", why:"Pola Subjek + Verb + Objek Akkusativ. der Laptop → einen Laptop."}
+  ]
+},
+{
+  id:"possessiv", num:"03", tag:"Grammatik", time:"14 menit",
+  title:"Keluarga & Kepemilikan (Possessivartikel)",
+  desc:"mein, dein, sein, ihr, unser, euer — untuk bercerita soal keluarga dan barang-barangmu.",
+  lede:"Aturannya sama persis dengan Akkusativ, cuma sekarang yang berubah adalah kata kepemilikannya.",
+  videos:[{id:"luhPMbPRs3o", cap:"Possessivartikel & kosakata keluarga"}],
+  summary:[
+    {h:"Daftar dasar Possessivartikel", html:
+      '<p class="note">Hafalkan bentuk dasarnya dulu, baru dipasang ke kalimat.</p>'+
+      '<div class="tscroll"><table><thead><tr><th>Subjek</th><th>Possessiv</th><th>Arti</th></tr></thead><tbody>'+
+      '<tr><td class="de">ich</td><td class="de"><b>mein</b></td><td>milikku</td></tr>'+
+      '<tr><td class="de">du</td><td class="de"><b>dein</b></td><td>milikmu</td></tr>'+
+      '<tr><td class="de">er</td><td class="de"><b>sein</b></td><td>miliknya (laki-laki)</td></tr>'+
+      '<tr><td class="de">sie</td><td class="de"><b>ihr</b></td><td>miliknya (perempuan)</td></tr>'+
+      '<tr><td class="de">es</td><td class="de"><b>sein</b></td><td>miliknya (netral)</td></tr>'+
+      '<tr><td class="de">wir</td><td class="de"><b>unser</b></td><td>milik kami</td></tr>'+
+      '<tr><td class="de">ihr</td><td class="de"><b>euer</b></td><td>milik kalian</td></tr>'+
+      '<tr><td class="de">Sie / sie</td><td class="de"><b>Ihr / ihr</b></td><td>milik Anda / milik mereka</td></tr>'+
+      '</tbody></table></div>'},
+    {h:"Kosakata keluarga & benda sekitar", html:
+      '<div class="tscroll"><table><thead><tr><th>Familie</th><th>Arti</th><th>Gegenstände</th><th>Arti</th></tr></thead><tbody>'+
+      '<tr><td class="de">der Vater</td><td>ayah</td><td class="de">der Computer</td><td>komputer</td></tr>'+
+      '<tr><td class="de">die Mutter</td><td>ibu</td><td class="de">die Tasche</td><td>tas</td></tr>'+
+      '<tr><td class="de">der Bruder</td><td>saudara laki-laki</td><td class="de">das Fenster</td><td>jendela</td></tr>'+
+      '<tr><td class="de">der Freund</td><td>teman laki-laki</td><td class="de">das Auto</td><td>mobil</td></tr>'+
+      '<tr><td class="de">die Freundin</td><td>teman perempuan</td><td class="de">der Schlüssel</td><td>kunci</td></tr>'+
+      '</tbody></table></div>'+
+      '<div class="ex"><span>Mein Vater ist alt. · Meine Mutter ist jung. · Mein Bruder ist klug.</span>'+
+      '<span class="id">Perhatikan: Vater dan Bruder maskulin jadi cukup mein, sedangkan Mutter feminin jadi meine.</span></div>'},
+    {h:"Di posisi subjek (Nominativ)", html:
+      '<p class="note">Benda <b>maskulin</b> dan <b>netral</b> → bentuk dasar, tanpa tambahan. Benda <b>feminin</b> → tambah <b class="hi">-e</b>.</p>'+
+      '<div class="ex">'+
+      '<span>Das Fenster ist sauber. → <b>Mein</b> Fenster ist sauber. / <b>Unser</b> Fenster ist sauber. <span class="id">(das — netral)</span></span>'+
+      '<span>Die Tasche ist neu. → <b>Seine</b> Tasche ist neu. / <b>Ihre</b> Tasche ist neu. <span class="id">(die — feminin, +e)</span></span>'+
+      '<span>Der Computer ist teuer. → <b>Ihr</b> Computer ist teuer. / <b>Euer</b> Computer ist teuer. <span class="id">(der — maskulin, tetap polos)</span></span>'+
+      '</div>'},
+    {h:"Di posisi objek (Akkusativ)", html:
+      '<div class="callout"><span class="lbl">Inti materi</span>Begitu benda <b>maskulin</b> jadi sasaran/objek, kata kepemilikannya <b>wajib</b> ditambah <span class="de hi">-en</span>. Feminin cukup <span class="de">-e</span>, netral tidak berubah.</div>'+
+      '<div class="tscroll"><table><thead><tr><th>Subjek</th><th>Nominativ (der / das)</th><th>Akkusativ (objek maskulin)</th><th>Akkusativ (objek feminin)</th></tr></thead><tbody>'+
+      '<tr class="mark"><td class="de">ich</td><td class="de">mein</td><td class="de"><b>meinen</b></td><td class="de">meine</td></tr>'+
+      '<tr><td class="de">du</td><td class="de">dein</td><td class="de"><b>deinen</b></td><td class="de">deine</td></tr>'+
+      '<tr><td class="de">er / es</td><td class="de">sein</td><td class="de"><b>seinen</b></td><td class="de">seine</td></tr>'+
+      '<tr><td class="de">sie</td><td class="de">ihr</td><td class="de"><b>ihren</b></td><td class="de">ihre</td></tr>'+
+      '<tr><td class="de">wir</td><td class="de">unser</td><td class="de"><b>unseren</b></td><td class="de">unsere</td></tr>'+
+      '<tr><td class="de">ihr</td><td class="de">euer</td><td class="de"><b>euren</b></td><td class="de">eure</td></tr>'+
+      '<tr><td class="de">Sie / sie</td><td class="de">Ihr / ihr</td><td class="de"><b>Ihren / ihren</b></td><td class="de">Ihre / ihre</td></tr>'+
+      '</tbody></table></div>'+
+      '<div class="ex">'+
+      '<span>Ich besuche <b class="hi">meinen</b> Freund. <span class="id">(der Freund — maskulin, +en)</span></span>'+
+      '<span>Ich besuche <b>meine</b> Freundin. <span class="id">(die Freundin — feminin, +e)</span></span>'+
+      '<span>Ich habe <b class="hi">einen</b> Freund. · Ich habe <b>eine</b> Freundin.</span>'+
+      '<span>Rafaela besucht <b>ihre</b> Mutter. <span class="id">(die Mutter — feminin)</span></span>'+
+      '</div>'+
+      '<ul class="bul" style="margin-top:12px"><li><b>Langkah 1</b> — Bendanya <span class="de">der</span> atau bukan?</li>'+
+      '<li><b>Langkah 2</b> — Kalau <span class="de">der</span> <i>dan</i> posisinya objek, tambahkan <b class="hi">-en</b>. Kalau bukan, jangan diapa-apakan.</li></ul>'}
+  ],
+  ex:[
+    {k:"fill", q:"ich → Akkusativ objek maskulin: __", hint:"Lengkapi tabel Possessivartikel", acc:[["meinen"]], sol:"meinen", why:"mein + akhiran -en untuk objek maskulin."},
+    {k:"fill", q:"du → Nominativ (der / das): __", hint:"Lengkapi tabel Possessivartikel", acc:[["dein"]], sol:"dein", why:"Di posisi subjek, maskulin dan netral memakai bentuk polos."},
+    {k:"fill", q:"er → Nominativ (die): __", hint:"Lengkapi tabel Possessivartikel", acc:[["seine"]], sol:"seine", why:"Feminin selalu +e."},
+    {k:"fill", q:"wir → Nominativ (der / das): __", hint:"Lengkapi tabel Possessivartikel", acc:[["unser"]], sol:"unser", why:"Bentuk dasar untuk wir adalah unser, tanpa tambahan."},
+    {k:"fill", q:"Das ist ein Fenster. __ Fenster ist sauber.", hint:"(Milikku · das Fenster)", acc:[["mein"]], sol:"Mein Fenster ist sauber.", why:"Netral di posisi subjek → mein, polos."},
+    {k:"fill", q:"Die Tasche ist neu. __ Tasche ist neu.", hint:"(Milik dia laki-laki / er · die Tasche)", acc:[["seine"]], sol:"Seine Tasche ist neu.", why:"Feminin → sein + e."},
+    {k:"fill", q:"Der Computer ist teuer. __ Computer ist teuer.", hint:"(Milik mereka / sie · der Computer)", acc:[["ihr"]], sol:"Ihr Computer ist teuer.", why:"Maskulin di posisi subjek tetap polos: ihr."},
+    {k:"fill", q:"Ich habe __ Freund.", hint:"(Seorang · der Freund)", acc:[["einen"]], sol:"Ich habe einen Freund.", why:"haben menuntut Akkusativ; der → einen."},
+    {k:"fill", q:"Ich besuche __ Freund.", hint:"(Milikku · der Freund)", acc:[["meinen"]], sol:"Ich besuche meinen Freund.", why:"Objek maskulin → mein + en."},
+    {k:"fill", q:"Rafaela besucht __ Mutter.", hint:"(Miliknya, perempuan · die Mutter)", acc:[["ihre"]], sol:"Rafaela besucht ihre Mutter.", why:"Objek feminin → ihr + e, bukan -en."},
+    {k:"fill", q:"Ich besuche __ Bruder.", hint:"(Milikmu · der Bruder)", acc:[["deinen"]], sol:"Ich besuche deinen Bruder.", why:"Objek maskulin → dein + en."},
+    {k:"rf", q:"Ich habe ein Freundin.", ans:false, fix:["ich habe eine freundin"], sol:"FALSCH → Ich habe eine Freundin.", why:"Freundin feminin, jadi artikelnya eine."},
+    {k:"rf", q:"Mein Bruder ist klug.", ans:true, fix:[], sol:"RICHTIG — tidak perlu diperbaiki.", why:"Bruder di sini subjek, jadi mein tetap polos."},
+    {k:"rf", q:"Ich besuche mein Freund.", ans:false, fix:["ich besuche meinen freund"], sol:"FALSCH → Ich besuche meinen Freund.", why:"Freund maskulin dan berposisi objek → wajib meinen."},
+    {k:"order", q:"Tulis bahasa Jermannya: “Tasnya (perempuan) baru.”", acc:[["ihre tasche ist neu"]], sol:"Ihre Tasche ist neu.", why:"die Tasche feminin, posisi subjek → ihre."},
+    {k:"order", q:"Perbaiki kalimat ini: Rafaela besucht ihr Vater.", acc:[["rafaela besucht ihren vater"]], sol:"Rafaela besucht ihren Vater.", why:"der Vater maskulin dan jadi objek → ihr + en."}
+  ]
+},
+{
+  id:"aktivitaeten", num:"04", tag:"Wortschatz + Grammatik", time:"12 menit",
+  title:"Aktivitas Bersama Teman",
+  desc:"Kosakata nongkrong bareng plus konjugasi kata kerja untuk subjek jamak wir / ihr / sie.",
+  lede:"Materi paling kepakai sehari-hari. Kalau kamu bisa cerita soal kegiatan bareng teman, kamu sudah bisa ngobrol.",
+  videos:[{id:"1BVkzaBL_Hc", cap:"Aktivitas bersama teman & konjugasi jamak"}],
+  summary:[
+    {h:"Was machen Freunde zusammen?", html:
+      '<div class="tscroll"><table><thead><tr><th>Deutsch</th><th>Arti</th><th>Contoh kalimat</th></tr></thead><tbody>'+
+      '<tr><td class="de">Musik hören</td><td>mendengarkan musik</td><td class="de">Wir hören zusammen Musik.</td></tr>'+
+      '<tr><td class="de">Ananassaft trinken</td><td>minum jus nanas</td><td class="de">Sie trinken Ananassaft.</td></tr>'+
+      '<tr><td class="de">telefonieren</td><td>menelepon</td><td class="de">Laura und Kati telefonieren gern.</td></tr>'+
+      '<tr><td class="de">zusammen spielen</td><td>bermain bersama</td><td class="de">Wir spielen zusammen Fußball.</td></tr>'+
+      '<tr><td class="de">Fußball spielen</td><td>main sepak bola</td><td class="de">Die Jungs spielen Fußball.</td></tr>'+
+      '<tr><td class="de">Gitarre spielen</td><td>main gitar</td><td class="de">Simon spielt Gitarre.</td></tr>'+
+      '<tr><td class="de">singen</td><td>bernyanyi</td><td class="de">Anna singt gern.</td></tr>'+
+      '<tr><td class="de">tanzen</td><td>menari</td><td class="de">Sie tanzen zusammen.</td></tr>'+
+      '<tr><td class="de">lachen</td><td>tertawa</td><td class="de">Freunde lachen zusammen.</td></tr>'+
+      '</tbody></table></div>'},
+    {h:"Konjugasi untuk subjek jamak", html:
+      '<div class="callout"><span class="lbl">Aturan super mudah</span><span class="de"><b>wir</b></span> dan <span class="de"><b>sie / Sie</b></span> → akhiran <b class="hi">-en</b> (bentuk dasar).<br><span class="de"><b>ihr</b></span> (kalian) → akhiran <b class="hi">-t</b>.</div>'+
+      '<div class="tscroll"><table><thead><tr><th>Pronomen</th><th class="de">wohnen</th><th class="de">hören</th><th class="de">trinken</th><th class="de">spielen</th></tr></thead><tbody>'+
+      '<tr><td class="de">ich</td><td class="de">wohne</td><td class="de">höre</td><td class="de">trinke</td><td class="de">spiele</td></tr>'+
+      '<tr><td class="de">du</td><td class="de">wohnst</td><td class="de">hörst</td><td class="de">trinkst</td><td class="de">spielst</td></tr>'+
+      '<tr><td class="de">er / sie / es</td><td class="de">wohnt</td><td class="de">hört</td><td class="de">trinkt</td><td class="de">spielt</td></tr>'+
+      '<tr class="mark"><td class="de"><b>wir</b></td><td class="de"><b>wohnen</b></td><td class="de"><b>hören</b></td><td class="de"><b>trinken</b></td><td class="de"><b>spielen</b></td></tr>'+
+      '<tr class="mark"><td class="de"><b>ihr</b></td><td class="de"><b>wohnt</b></td><td class="de"><b>hört</b></td><td class="de"><b>trinkt</b></td><td class="de"><b>spielt</b></td></tr>'+
+      '<tr class="mark"><td class="de"><b>sie / Sie</b></td><td class="de"><b>wohnen</b></td><td class="de"><b>hören</b></td><td class="de"><b>trinken</b></td><td class="de"><b>spielen</b></td></tr>'+
+      '</tbody></table></div>'+
+      '<div class="ex"><span>Wir wohnen in München. · Ihr wohnt in Köln. · Sie wohnen in Zürich.</span>'+
+      '<span>Wir hören zusammen Musik. · Ihr hört zu laut. · Sie hören klassische Musik.</span>'+
+      '<span class="id">Bentuk wir dan sie/Sie selalu identik. Yang beda sendiri cuma ihr.</span></div>'},
+    {h:"Dipakai untuk menjawab apa?", html:
+      '<div class="tscroll"><table><thead><tr><th>Frage</th><th>Contoh jawaban</th></tr></thead><tbody>'+
+      '<tr><td class="de">Was machst du mit deinen Freunden zusammen?</td><td class="de">Wir spielen zusammen Fußball.</td></tr>'+
+      '<tr><td class="de">Hörst du gern Musik?</td><td class="de">Ja, ich höre gern Musik.</td></tr>'+
+      '<tr><td class="de">Aus welchem Land kommst du?</td><td class="de">Ich komme aus Indonesien.</td></tr>'+
+      '</tbody></table></div>'+
+      '<p class="note" style="margin-top:11px">Kalau kegiatannya mau <b>dibantah</b> — misalnya "kami <i>tidak</i> main bola" — lanjut ke Materi 05.</p>'}
+  ],
+  ex:[
+    {k:"fill", q:"Wir __ in München.", hint:"(wohnen)", acc:[["wohnen"]], sol:"Wir wohnen in München.", why:"wir → akhiran -en."},
+    {k:"fill", q:"Ihr __ in Köln.", hint:"(wohnen)", acc:[["wohnt"]], sol:"Ihr wohnt in Köln.", why:"ihr → akhiran -t."},
+    {k:"fill", q:"Wir __ zusammen Musik und ihr __ Fußball.", hint:"(hören · spielen)", acc:[["horen","hoeren"],["spielt"]], sol:"Wir hören zusammen Musik und ihr spielt Fußball.", why:"wir → -en, ihr → -t. Dua pola itu saja."},
+    {k:"fill", q:"Sie __ Kaffee, aber ihr __ Ananassaft.", hint:"(trinken · trinken)", acc:[["trinken"],["trinkt"]], sol:"Sie trinken Kaffee, aber ihr trinkt Ananassaft.", why:"sie/Sie → -en, ihr → -t."},
+    {k:"fill", q:"Ihr __ miteinander und wir __ jeden Tag.", hint:"(telefonieren · telefonieren)", acc:[["telefoniert"],["telefonieren"]], sol:"Ihr telefoniert miteinander und wir telefonieren jeden Tag.", why:"Polanya sama untuk kata kerja apa pun."},
+    {k:"mc", q:"Manakah kalimat yang konjugasinya benar?", opts:["Ihr hören zu laut.","Wir hört zusammen Musik.","Ihr hört zu laut.","Wir hörst Musik.","Ihr hören gern Musik."], ans:2, sol:"C. Ihr hört zu laut.", why:"ihr selalu berakhiran -t; wir dan sie/Sie berakhiran -en."},
+    {k:"order", q:"zusammen · Wir · Fußball · spielen", acc:[["wir spielen zusammen fussball"]], sol:"Wir spielen zusammen Fußball.", why:"Subjek + kata kerja + keterangan + objek kegiatan."},
+    {k:"order", q:"Ananassaft · trinken · Sie", acc:[["sie trinken ananassaft"]], sol:"Sie trinken Ananassaft.", why:"sie (mereka) → trinken, berakhiran -en."}
+  ]
+},
+{
+  id:"nicht", num:"05", tag:"Grammatik", time:"9 menit",
+  title:"Negasi: Membantah dengan nicht",
+  desc:"Cara membantah pernyataan tentang kegiatan, dan di mana persisnya kata nicht diletakkan.",
+  lede:"Pasangan langsung Materi 04. Kalimatnya sama, cuma sekarang dibantah. Materi paling singkat, tapi paling sering salah letak.",
+  videos:[{id:"1jnW4aKkHtU", cap:"Negasi dengan nicht"}],
+  summary:[
+    {h:"Patokan tunggal", html:
+      '<div class="callout"><span class="lbl">Ingat ini saja</span>Taruh <span class="de"><b>nicht</b></span> <b>tepat sebelum bagian yang kamu bantah</b>. Kalau yang dibantah adalah kata kerjanya sendiri, <span class="de">nicht</span> jatuh di <b>akhir kalimat</b>.</div>'+
+      '<div class="tscroll"><table><thead><tr><th>Yang dibantah</th><th>Contoh</th><th>Arti</th></tr></thead><tbody>'+
+      '<tr class="mark"><td><b>Kegiatan / pelengkap</b></td><td class="de">Wir spielen <b class="hi">nicht</b> Fußball.</td><td>Kami tidak main bola.</td></tr>'+
+      '<tr class="mark"><td><b>Kegiatan / pelengkap</b></td><td class="de">Ihr spielt <b class="hi">nicht</b> Gitarre.</td><td>Kalian tidak main gitar.</td></tr>'+
+      '<tr><td><b>Kata sifat</b></td><td class="de">Ich bin <b class="hi">nicht</b> müde.</td><td>Aku tidak lelah.</td></tr>'+
+      '<tr><td><b>Kata sifat</b></td><td class="de">Das ist <b class="hi">nicht</b> gut.</td><td>Itu tidak baik.</td></tr>'+
+      '<tr><td><b>Keterangan waktu</b></td><td class="de">Ich komme <b class="hi">nicht</b> heute.</td><td>Bukan hari ini aku datang.</td></tr>'+
+      '<tr><td><b>Keterangan tempat</b></td><td class="de">Laura wohnt <b class="hi">nicht</b> in Wien.</td><td>Laura tidak tinggal di Wina.</td></tr>'+
+      '<tr><td><b>Kata kerjanya sendiri</b></td><td class="de">Ich schwimme <b class="hi">nicht</b>.</td><td>Aku tidak berenang.</td></tr>'+
+      '</tbody></table></div>'+
+      '<p class="note" style="margin-top:11px">Dua baris pertama yang paling sering kepakai buat cerita aktivitas: subjek jamak dari Materi 04 + <span class="de">nicht</span> + kegiatannya.</p>'},
+    {h:"nicht atau kein?", html:
+      '<div class="tscroll"><table><thead><tr><th class="de">nicht</th><th class="de">kein</th></tr></thead><tbody>'+
+      '<tr><td>untuk kata kerja, kata sifat, keterangan</td><td>untuk kata benda ber-<span class="de">ein</span></td></tr>'+
+      '<tr><td class="de">Ich bin nicht müde.</td><td class="de">Ich habe keinen Hund.</td></tr>'+
+      '<tr><td class="de">Das ist nicht schön.</td><td class="de">Das ist kein Buch.</td></tr>'+
+      '</tbody></table></div>'+
+      '<p class="note" style="margin-top:11px">Di level ini fokusmu <b class="hi">nicht</b> dulu. <span class="de">kein</span> dibahas tuntas di pelajaran berikutnya — cukup tahu bedanya supaya tidak ketuker.</p>'},
+    {h:"Contoh siap pakai", html:
+      '<div class="ex">'+
+      '<span>Das ist <b class="hi">nicht</b> Anna. <span class="id">(Itu bukan Anna)</span></span>'+
+      '<span>Laura wohnt <b class="hi">nicht</b> in Wien. <span class="id">(Laura tidak tinggal di Wina)</span></span>'+
+      '<span>Sie macht <b class="hi">nicht</b> gern Mathe. <span class="id">(Dia tidak suka matematika)</span></span>'+
+      '<span>Wir spielen <b class="hi">nicht</b> Fußball. <span class="id">(Kami tidak main bola)</span></span>'+
+      '<span>Ich bin <b class="hi">nicht</b> müde. <span class="id">(Aku tidak lelah)</span></span>'+
+      '</div>'}
+  ],
+  ex:[
+    {k:"order", q:"müde · nicht · Ich · bin", acc:[["ich bin nicht mude","ich bin nicht muede"]], sol:"Ich bin nicht müde.", why:"Yang dibantah kata sifat müde, jadi nicht ditaruh tepat sebelumnya."},
+    {k:"order", q:"Fußball · nicht · Wir · spielen", acc:[["wir spielen nicht fussball"]], sol:"Wir spielen nicht Fußball.", why:"Yang dibantah kegiatannya, jadi nicht sebelum Fußball."},
+    {k:"order", q:"Gitarre · nicht · Ihr · spielt", acc:[["ihr spielt nicht gitarre"]], sol:"Ihr spielt nicht Gitarre.", why:"ihr → spielt, lalu nicht sebelum bagian yang dibantah."},
+    {k:"fill", q:"Laura wohnt __ in Wien.", hint:"(bantah pernyataannya)", acc:[["nicht"]], sol:"Laura wohnt nicht in Wien.", why:"Yang dibantah keterangan tempat, jadi nicht ditaruh tepat sebelum in Wien."},
+    {k:"mc", q:"Manakah kalimat yang benar untuk “Itu bukan sebuah buku”?", opts:["Das ist nicht Buch.","Das ist nicht ein Buch.","Das ist kein Buch.","Das ist ein nicht Buch.","Das nicht ist Buch."], ans:2, sol:"C. Das ist kein Buch.", why:"Kata benda ber-ein dibantah dengan kein, bukan nicht."},
+    {k:"rf", q:"Ich habe nicht einen Hund.", ans:false, fix:["ich habe keinen hund"], sol:"FALSCH → Ich habe keinen Hund.", why:"Kata benda dengan artikel ein dibantah pakai kein, bukan nicht."},
+    {k:"rf", q:"Sie macht nicht gern Mathe.", ans:true, fix:[], sol:"RICHTIG — tidak perlu diperbaiki.", why:"nicht diletakkan sebelum gern Mathe, bagian yang dibantah."},
+    {k:"order", q:"Anna · nicht · ist · Das", acc:[["das ist nicht anna"]], sol:"Das ist nicht Anna.", why:"Yang dibantah nama Anna, jadi nicht tepat sebelumnya."}
+  ]
+},
+{
+  id:"laender", num:"06", tag:"Wortschatz", time:"10 menit",
+  title:"Länder & Städte",
+  desc:"Negara, ibu kota, dan kapan sebuah negara butuh artikel saat dipakai dengan aus / in.",
+  lede:"Materi tambahan untuk memperkenalkan diri dan menyebut asal orang. Yang perlu dihafal cuma sedikit.",
+  videos:[],
+  summary:[
+    {h:"Deutschsprachige Länder", html:
+      '<div class="tscroll"><table><thead><tr><th>Land</th><th>Arti</th><th>Hauptstadt</th></tr></thead><tbody>'+
+      '<tr><td class="de">Deutschland</td><td>Jerman</td><td class="de">Berlin</td></tr>'+
+      '<tr><td class="de">Österreich</td><td>Austria</td><td class="de">Wien</td></tr>'+
+      '<tr><td class="de">die Schweiz</td><td>Swiss</td><td class="de">Bern</td></tr>'+
+      '<tr><td class="de">Liechtenstein</td><td>Liechtenstein</td><td class="de">Vaduz</td></tr>'+
+      '</tbody></table></div>'},
+    {h:"Negara lain yang sering muncul", html:
+      '<div class="tscroll"><table><thead><tr><th>Deutsch</th><th>Arti</th><th>Deutsch</th><th>Arti</th></tr></thead><tbody>'+
+      '<tr><td class="de">Indonesien</td><td>Indonesia</td><td class="de">Italien</td><td>Italia</td></tr>'+
+      '<tr><td class="de">die Türkei</td><td>Turki</td><td class="de">Spanien</td><td>Spanyol</td></tr>'+
+      '<tr><td class="de">China</td><td>China</td><td class="de">Russland</td><td>Rusia</td></tr>'+
+      '<tr><td class="de">Japan</td><td>Jepang</td><td class="de">die USA</td><td>Amerika Serikat (jamak)</td></tr>'+
+      '<tr><td class="de">Frankreich</td><td>Prancis</td><td class="de">England</td><td>Inggris</td></tr>'+
+      '</tbody></table></div>'},
+    {h:"Aturan artikel negara", html:
+      '<div class="callout"><span class="lbl">Aturan super mudah</span>Sebagian besar negara <b>tanpa artikel</b> → <span class="de">aus / in Deutschland</span>.<br>Beberapa negara <b>feminin</b> (<span class="de">die Schweiz, die Türkei</span>) → pakai artikel → <span class="de">aus / in <b class="hi">der</b> Schweiz</span>.</div>'+
+      '<div class="ex">'+
+      '<span>Ich komme aus Deutschland. <span class="id">(Aku dari Jerman)</span></span>'+
+      '<span>Sie wohnt in <b class="hi">der</b> Schweiz. <span class="id">(Dia tinggal di Swiss)</span></span>'+
+      '<span>Wir sind aus Österreich. <span class="id">(Kami dari Austria)</span></span>'+
+      '<span>Er kommt aus <b class="hi">der</b> Türkei. <span class="id">(Dia dari Turki)</span></span>'+
+      '</div>'+
+      '<p class="note" style="margin-top:11px"><b>Catatan kecil:</b> <span class="de">die USA</span> bentuknya jamak, jadi lengkapnya <span class="de">aus / in <b class="hi">den</b> USA</span>.</p>'},
+    {h:"Städte", html:
+      '<div class="tscroll"><table><thead><tr><th>Stadt</th><th>Arti</th><th>Land</th></tr></thead><tbody>'+
+      '<tr><td class="de">Berlin</td><td>Berlin</td><td class="de">Deutschland</td></tr>'+
+      '<tr><td class="de">München</td><td>Munich</td><td class="de">Deutschland</td></tr>'+
+      '<tr><td class="de">Hamburg</td><td>Hamburg</td><td class="de">Deutschland</td></tr>'+
+      '<tr><td class="de">Köln</td><td>Koln</td><td class="de">Deutschland</td></tr>'+
+      '<tr><td class="de">Wien</td><td>Wina</td><td class="de">Österreich</td></tr>'+
+      '<tr><td class="de">Salzburg</td><td>Salzburg</td><td class="de">Österreich</td></tr>'+
+      '<tr><td class="de">Bern</td><td>Bern</td><td class="de">die Schweiz</td></tr>'+
+      '<tr><td class="de">Zürich</td><td>Zurich</td><td class="de">die Schweiz</td></tr>'+
+      '<tr><td class="de">Vaduz</td><td>Vaduz</td><td class="de">Liechtenstein</td></tr>'+
+      '</tbody></table></div>'}
+  ],
+  ex:[
+    {k:"fill", q:"Ich komme aus __.", hint:"(Indonesia)", acc:[["indonesien"]], sol:"Ich komme aus Indonesien.", why:"Indonesien tanpa artikel."},
+    {k:"fill", q:"Sie wohnt in __ Schweiz.", hint:"(artikel yang tepat)", acc:[["der"]], sol:"Sie wohnt in der Schweiz.", why:"die Schweiz feminin, jadi wajib pakai artikel der setelah in."},
+    {k:"fill", q:"Er kommt aus __ Türkei.", hint:"(artikel yang tepat)", acc:[["der"]], sol:"Er kommt aus der Türkei.", why:"die Türkei feminin → aus der Türkei."},
+    {k:"fill", q:"Die Hauptstadt von Österreich ist __.", hint:"(nama kota)", acc:[["wien"]], sol:"Die Hauptstadt von Österreich ist Wien.", why:"Wien = Wina, ibu kota Austria."},
+    {k:"fill", q:"Die Hauptstadt von der Schweiz ist __.", hint:"(nama kota)", acc:[["bern"]], sol:"Die Hauptstadt von der Schweiz ist Bern.", why:"Bern, bukan Zürich — Zürich kota terbesar, tapi bukan ibu kota."},
+    {k:"mc", q:"Manakah kalimat yang benar?", opts:["Ich komme aus die Schweiz.","Ich komme aus der Schweiz.","Ich komme aus Schweiz.","Ich komme aus dem Deutschland.","Ich komme aus die Deutschland."], ans:1, sol:"B. Ich komme aus der Schweiz.", why:"Negara feminin butuh artikel, dan setelah aus bentuknya der."},
+    {k:"order", q:"aus · Wir · Österreich · sind", acc:[["wir sind aus osterreich","wir sind aus oesterreich"]], sol:"Wir sind aus Österreich.", why:"Österreich tanpa artikel."}
+  ]
+}
+];
+
+/* ---- Daily Challenge: 5 soal campuran dari keempat materi utama ---- */
+var CHALLENGE = {
+  id:"challenge",
+  title:"Daily Challenge",
+  lede:"Lima soal campuran dari Materi 01 sampai 05. Target realistis: 5 menit, tiap hari, tanpa buka catatan.",
+  ex:[
+    {k:"fill", q:"__ Apfel ist rot.", hint:"Materi 01 · (Apfel = maskulin, artikel tentu)", acc:[["der"]], sol:"Der Apfel ist rot.", why:"Posisi subjek dan maskulin, jadi artikelnya der."},
+    {k:"fill", q:"__ Mutter ist jung.", hint:"Materi 03 · (Milikku · die Mutter)", acc:[["meine"]], sol:"Meine Mutter ist jung.", why:"die Mutter feminin, jadi mein dapat akhiran -e."},
+    {k:"fill", q:"Ich brauche __ Stift.", hint:"Materi 02 · (der Stift)", acc:[["den","einen"]], sol:"Ich brauche den Stift.", why:"brauchen menuntut objek Akkusativ; der berubah jadi den (atau einen)."},
+    {k:"order", q:"Musik · Wir · zusammen · hören", acc:[["wir horen zusammen musik","wir hoeren zusammen musik"]], sol:"Wir hören zusammen Musik.", why:"Materi 04: wir berakhiran -en, lalu keterangan, lalu objek kegiatan."},
+    {k:"order", q:"nicht · Fußball · spielen · Wir", acc:[["wir spielen nicht fussball"]], sol:"Wir spielen nicht Fußball.", why:"Materi 05: nicht ditaruh tepat sebelum kegiatan yang dibantah."}
+  ]
+};
+
+var VOCAB = [
+ {g:"Benda & Sekolah", items:[
+  ["der Computer","komputer"],["die Tasche","tas"],["das Fenster","jendela"],
+  ["der Stift","pulpen / pensil"],["der Schlüssel","kunci"],["das Auto","mobil"],
+  ["der Bus","bus"],["der Laptop","laptop"],["das Buch","buku"],["der Lehrer","guru (lk)"],
+  ["die Schule","sekolah"],["das Mädchen","anak perempuan"]
+ ]},
+ {g:"Keluarga & Orang", items:[
+  ["der Vater","ayah"],["die Mutter","ibu"],["der Bruder","saudara laki-laki"],
+  ["der Freund","teman laki-laki / pacar cowok"],["die Freundin","teman perempuan / pacar cewek"],
+  ["die Freunde","teman-teman (jamak)"],["die Oma","nenek"],["die Jungs","anak-anak cowok"]
+ ]},
+ {g:"Makanan & Minuman", items:[
+  ["der Apfel","apel"],["der Kaffee","kopi"],["der Tee","teh"],
+  ["die Limonade","limun"],["der Ananassaft","jus nanas"],["die Milch","susu"],
+  ["das Wasser","air"],["die Cola","cola"],["der Hund","anjing"]
+ ]},
+ {g:"Kata kerja", items:[
+  ["sehen","melihat"],["haben","memiliki"],["kaufen","membeli"],["brauchen","membutuhkan"],
+  ["essen","makan"],["trinken","minum"],["finden","menemukan"],["besuchen","mengunjungi"],
+  ["kennen","mengenal"],["nehmen","mengambil / menaiki"],["wohnen","tinggal"],["hören","mendengar"],
+  ["spielen","bermain"],["telefonieren","menelepon"],["singen","bernyanyi"],["tanzen","menari"],
+  ["lachen","tertawa"],["schwimmen","berenang"],["kommen","datang / berasal"]
+ ]},
+ {g:"Aktivitas & Ungkapan", items:[
+  ["Musik hören","mendengarkan musik"],["Fußball spielen","main sepak bola"],
+  ["Gitarre spielen","main gitar"],["zusammen spielen","bermain bersama"],
+  ["gern","suka / dengan senang hati"],["zusammen","bersama"],["jeden Tag","setiap hari"],
+  ["Wen?","siapa yang dikenai?"],["Was?","apa yang dikenai?"]
+ ]},
+ {g:"Kata sifat", items:[
+  ["neu","baru"],["teuer","mahal"],["sauber","bersih"],["alt","tua"],["jung","muda"],
+  ["klug","pintar"],["müde","lelah"],["gut","baik"],["schön","indah / bagus"],["laut","keras (suara)"],
+  ["groß","besar"],["rot","merah"],["nett","baik / ramah"]
+ ]},
+ {g:"Länder & Städte", items:[
+  ["Deutschland","Jerman"],["Österreich","Austria"],["die Schweiz","Swiss"],
+  ["Liechtenstein","Liechtenstein"],["Indonesien","Indonesia"],["die Türkei","Turki"],
+  ["Berlin","ibu kota Jerman"],["Wien","Wina, ibu kota Austria"],["Bern","ibu kota Swiss"],
+  ["München","Munich"],["Köln","Koln"],["Zürich","Zurich"]
+ ]}
+];
+
+/* =====================================================================
+   UTIL
+   ===================================================================== */
+var LS = "deutschklasse-xii-v1";
+
+function norm(s){
+  return String(s == null ? "" : s).toLowerCase()
+    .replace(/ß/g,"ss").replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u")
+    .replace(/[.,!?;:’'“”·]/g," ").replace(/\s+/g," ").trim();
+}
+function loadStore(){
+  try{
+    var raw = localStorage.getItem(LS);
+    if(raw){ var d = JSON.parse(raw); if(d && typeof d === "object") return {ans:d.ans||{}, best:d.best||{}}; }
+  }catch(e){}
+  return {ans:{}, best:{}};
+}
+function saveStore(s){ try{ localStorage.setItem(LS, JSON.stringify(s)); }catch(e){} }
+
+/* kelas Tailwind yang sering dipakai */
+var C = {
+  card: "bg-surf dark:bg-surfD border border-line dark:border-lineD rounded-md shadow-sm",
+  eyebrow: "font-mono text-[.66rem] tracking-[.14em] uppercase text-ink3 dark:text-ink3D font-semibold",
+  pill: "font-mono text-[.66rem] tracking-[.06em] uppercase text-ink3 dark:text-ink3D border border-line dark:border-lineD rounded-full px-2 py-[3px]",
+  input: "font-mono text-base bg-surf dark:bg-surfD text-ink dark:text-inkD border border-lineS dark:border-lineSD rounded px-[10px] py-[9px] min-h-[42px] w-full",
+  btnPrimary: "font-sans text-[.96rem] font-bold rounded px-5 py-3 min-h-[48px] bg-acc dark:bg-accD text-white dark:text-[#08201F] hover:brightness-110 cursor-pointer",
+  btnGhost: "font-sans text-[.96rem] font-bold rounded px-5 py-3 min-h-[48px] bg-transparent text-ink2 dark:text-ink2D border border-lineS dark:border-lineSD hover:bg-surf2 dark:hover:bg-surf2D cursor-pointer"
+};
+
+/* =====================================================================
+   KOMPONEN KECIL
+   ===================================================================== */
+function VideoBlock(props){
+  var v = props.video;
+  var url = "https://www.youtube.com/watch?v=" + v.id;
+  return h("div", {className:"flex flex-col gap-2"},
+    h("div", {className:"relative w-full aspect-video rounded-md overflow-hidden border border-line dark:border-lineD bg-surf2 dark:bg-surf2D"},
+      /* panel cadangan: terlihat kalau jaringan sekolah memblokir YouTube */
+      h("a", {href:url, target:"_blank", rel:"noopener",
+          className:"absolute inset-0 z-0 flex flex-col items-center justify-center gap-3 text-center px-6 no-underline"},
+        h("span", {"aria-hidden":"true",
+          className:"w-14 h-14 rounded-full bg-acc dark:bg-accD grid place-items-center text-white dark:text-[#08201F] text-xl pl-[3px]"}, "\u25B6"),
+        h("span", {className:"font-sans text-[.9rem] text-ink2 dark:text-ink2D"}, "Ketuk untuk menonton di YouTube")
+      ),
+      h("iframe", {
+        className:"absolute inset-0 z-10 w-full h-full",
+        src:"https://www.youtube.com/embed/" + v.id,
+        title:v.cap,
+        frameBorder:"0",
+        loading:"lazy",
+        allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+        allowFullScreen:true,
+        referrerPolicy:"strict-origin-when-cross-origin"
+      })
+    ),
+    h("div", {className:"flex flex-wrap items-center gap-x-3 gap-y-1"},
+      h("span", {className:"text-[.85rem] text-ink3 dark:text-ink3D"}, v.cap),
+      h("a", {href:url, target:"_blank", rel:"noopener",
+        className:"text-[.85rem] font-semibold text-accInk dark:text-accInkD underline"}, "Buka di YouTube \u2197")
+    )
+  );
+}
+
+function StatusPill(props){
+  var f = props.frac;
+  if(f == null) return null;
+  var cls = f >= 1 ? "bg-okBg dark:bg-okBgD text-ok dark:text-okD"
+          : f > 0  ? "bg-goldBg dark:bg-goldBgD text-gold dark:text-goldD"
+                   : "bg-noBg dark:bg-noBgD text-no dark:text-noD";
+  var txt = f >= 1 ? "Benar" : (f > 0 ? "Separuh" : "Belum tepat");
+  return h("span", {className:"ml-auto font-mono text-[.63rem] tracking-[.08em] uppercase font-semibold px-[9px] py-[3px] rounded-full " + cls}, txt);
+}
+
+function Feedback(props){
+  var f = props.frac, it = props.item;
+  if(f == null) return null;
+  var okCls = f >= 1
+    ? "bg-okBg dark:bg-okBgD border-ok dark:border-okD"
+    : "bg-noBg dark:bg-noBgD border-no dark:border-noD";
+  var lblCls = f >= 1 ? "text-ok dark:text-okD" : "text-no dark:text-noD";
+  return h("div", {className:"mt-3 rounded border px-3 py-[10px] text-[.9rem] " + okCls},
+    h("span", {className:"block mb-[5px] font-mono text-[.63rem] tracking-[.1em] uppercase font-semibold " + lblCls},
+      f >= 1 ? "Tepat" : "Jawaban yang benar"),
+    h("div", {className:"font-mono font-medium"}, it.sol),
+    h("div", {className:"mt-[5px] text-ink2 dark:text-ink2D"}, it.why)
+  );
+}
+
+/* satu butir soal */
+function ExItem(props){
+  var it = props.item, idx = props.idx, tid = props.tid;
+  var ans = props.ans, setAns = props.setAns, frac = props.frac;
+  var key = function(i){ return "in-" + tid + "-" + idx + "-" + i; };
+  var val = function(i){ return ans[key(i)] || ""; };
+  var put = function(i, v){ setAns(key(i), v); };
+
+  var kindLbl = it.k === "fill" ? "Lückentext" : it.k === "mc" ? "Pilihan Ganda"
+              : it.k === "rf" ? "Richtig / Falsch" : "Satzbau";
+
+  function fieldCls(good){
+    var base = C.input;
+    if(good == null) return base;
+    return base + (good ? " !border-ok dark:!border-okD bg-okBg dark:bg-okBgD"
+                        : " !border-no dark:!border-noD bg-noBg dark:bg-noBgD");
+  }
+
+  var body = null;
+
+  if(it.k === "fill"){
+    var parts = it.q.split("__");
+    var nodes = [];
+    parts.forEach(function(p, i){
+      if(p) nodes.push(h("span", {key:"t"+i, className:"whitespace-pre-wrap"}, p));
+      if(i < parts.length - 1){
+        var good = frac == null ? null : (it.acc[i].indexOf(norm(val(i))) > -1);
+        nodes.push(h("input", {
+          key:"i"+i, type:"text", value:val(i), placeholder:"…", autoComplete:"off",
+          "aria-label":"Isian " + (i+1) + " soal " + (idx+1),
+          onChange:function(e){ put(i, e.target.value); },
+          className: fieldCls(good) + " !w-auto min-w-[96px] max-w-[200px] flex-[0_1_auto] !px-[9px] !py-[5px] !min-h-[38px]"
+        }));
+      }
+    });
+    body = h("div", null,
+      h("div", {className:"flex flex-wrap items-center gap-[7px] font-mono text-[.97rem] leading-[2.15]"}, nodes),
+      it.hint ? h("p", {className:"text-[.85rem] text-ink3 dark:text-ink3D mt-2"}, it.hint) : null
+    );
+  }
+  else if(it.k === "mc"){
+    body = h("div", null,
+      h("p", {className:"text-[.95rem] text-ink2 dark:text-ink2D mb-3"}, it.q),
+      h("div", {className:"flex flex-col gap-2", role:"radiogroup", "aria-label":"Soal " + (idx+1)},
+        it.opts.map(function(o, i){
+          var picked = val(0) === String(i);
+          var extra = "";
+          if(frac != null){
+            if(i === it.ans) extra = " !border-ok dark:!border-okD bg-okBg dark:bg-okBgD";
+            else if(picked) extra = " !border-no dark:!border-noD bg-noBg dark:bg-noBgD";
+          } else if(picked){
+            extra = " !border-acc dark:!border-accD bg-accSoft dark:bg-accSoftD";
+          }
+          return h("label", {key:i,
+            className:"flex items-center gap-3 border border-lineS dark:border-lineSD rounded px-3 py-[10px] min-h-[44px] cursor-pointer bg-surf dark:bg-surfD hover:bg-surf2 dark:hover:bg-surf2D" + extra},
+            h("input", {type:"radio", name:"mc-"+tid+"-"+idx, checked:picked,
+              onChange:function(){ put(0, String(i)); },
+              className:"w-[18px] h-[18px] flex-none accent-acc dark:accent-accD cursor-pointer"}),
+            h("span", {className:"font-mono font-semibold text-ink3 dark:text-ink3D text-[.84rem] w-[1.1em] flex-none"}, "ABCDE".charAt(i)),
+            h("span", {className:"font-mono text-[.96rem]"}, o)
+          );
+        })
+      )
+    );
+  }
+  else if(it.k === "rf"){
+    var want = it.ans ? "r" : "f";
+    var pick = val(0);
+    var fixGood = null;
+    if(frac != null && it.ans === false) fixGood = it.fix.indexOf(norm(val(1))) > -1;
+    body = h("div", null,
+      h("p", {className:"text-[.95rem] text-ink2 dark:text-ink2D mb-3"},
+        "Apakah kalimat ini benar secara tata bahasa? ",
+        h("b", {className:"font-mono text-ink dark:text-inkD"}, it.q)),
+      h("div", {className:"flex flex-wrap gap-2", role:"radiogroup", "aria-label":"Soal " + (idx+1)},
+        [["r","Richtig"],["f","Falsch"]].map(function(o){
+          var picked = pick === o[0];
+          var extra = "";
+          if(frac != null){
+            if(o[0] === want) extra = " !border-ok dark:!border-okD bg-okBg dark:bg-okBgD";
+            else if(picked) extra = " !border-no dark:!border-noD bg-noBg dark:bg-noBgD";
+          } else if(picked){
+            extra = " !border-acc dark:!border-accD bg-accSoft dark:bg-accSoftD";
+          }
+          return h("label", {key:o[0],
+            className:"flex-1 min-w-[130px] flex items-center gap-3 border border-lineS dark:border-lineSD rounded px-3 py-[10px] min-h-[44px] cursor-pointer bg-surf dark:bg-surfD hover:bg-surf2 dark:hover:bg-surf2D" + extra},
+            h("input", {type:"radio", name:"rf-"+tid+"-"+idx, checked:picked,
+              onChange:function(){ put(0, o[0]); },
+              className:"w-[18px] h-[18px] flex-none accent-acc dark:accent-accD cursor-pointer"}),
+            h("span", {className:"font-mono text-[.96rem]"}, o[1])
+          );
+        })
+      ),
+      h("div", {className:"mt-3"},
+        h("label", {className:"block text-[.85rem] text-ink3 dark:text-ink3D mb-[6px]", htmlFor:key(1)},
+          "Perbaikan (kosongkan kalau menurutmu sudah benar):"),
+        h("input", {id:key(1), type:"text", value:val(1), autoComplete:"off",
+          placeholder:"Tulis kalimat yang benar…",
+          onChange:function(e){ put(1, e.target.value); },
+          className: fieldCls(fixGood)})
+      )
+    );
+  }
+  else {
+    var goodO = frac == null ? null : (it.acc[0].indexOf(norm(val(0))) > -1);
+    var tiles = it.q.indexOf("·") > -1
+      ? it.q.split("·").map(function(s){ return s.trim(); })
+      : null;
+    body = h("div", null,
+      h("p", {className:"text-[.95rem] text-ink2 dark:text-ink2D mb-3"}, it.q),
+      tiles ? h("div", {className:"flex flex-wrap gap-2 mb-3"},
+        tiles.map(function(w, i){
+          return h("span", {key:i, className:"font-mono text-[.94rem] font-medium bg-surf2 dark:bg-surf2D border border-lineS dark:border-lineSD rounded px-[11px] py-[6px]"}, w);
+        })) : null,
+      h("input", {type:"text", value:val(0), autoComplete:"off",
+        placeholder:"Tulis kalimat lengkapnya…",
+        "aria-label":"Jawaban soal " + (idx+1),
+        onChange:function(e){ put(0, e.target.value); },
+        className: fieldCls(goodO)})
+    );
+  }
+
+  return h("article", {className:C.card + " overflow-hidden"},
+    h("div", {className:"flex items-center gap-[9px] flex-wrap px-[15px] py-[10px] border-b border-line dark:border-lineD bg-surf2 dark:bg-surf2D"},
+      h("span", {className:"font-mono font-semibold text-[.72rem] bg-ink dark:bg-inkD text-surf dark:text-surfD rounded px-2 py-[3px]"},
+        String(idx+1).length < 2 ? "0" + (idx+1) : String(idx+1)),
+      h("span", {className:"font-mono text-[.63rem] tracking-[.09em] uppercase text-ink3 dark:text-ink3D font-semibold"}, kindLbl),
+      h(StatusPill, {frac:frac})
+    ),
+    h("div", {className:"p-[15px]"}, body, h(Feedback, {frac:frac, item:it}))
+  );
+}
+
+/* mesin penilaian */
+function scoreSet(exList, tid, ans){
+  var fracs = [], got = 0, max = 0;
+  exList.forEach(function(it, idx){
+    var k = function(i){ return ans["in-" + tid + "-" + idx + "-" + i] || ""; };
+    var f = 0;
+    if(it.k === "fill"){
+      var c = 0;
+      it.acc.forEach(function(list, i){ if(list.indexOf(norm(k(i))) > -1) c++; });
+      f = c / it.acc.length; got += c; max += it.acc.length;
+    } else if(it.k === "mc"){
+      f = (String(it.ans) === k(0)) ? 1 : 0; got += f; max += 1;
+    } else if(it.k === "rf"){
+      var okPick = k(0) === (it.ans ? "r" : "f");
+      if(it.ans === false){
+        var okFix = it.fix.indexOf(norm(k(1))) > -1;
+        f = ((okPick?1:0) + (okFix?1:0)) / 2;
+        got += (okPick?1:0) + (okFix?1:0); max += 2;
+      } else {
+        f = okPick ? 1 : 0; got += f; max += 1;
+      }
+    } else {
+      f = (it.acc[0].indexOf(norm(k(0))) > -1) ? 1 : 0; got += f; max += 1;
+    }
+    fracs.push(f);
+  });
+  return {fracs:fracs, pct: Math.round((got / max) * 100)};
+}
+
+function ExerciseSet(props){
+  var exList = props.exList, tid = props.tid;
+  var ans = props.ans, setAns = props.setAns;
+  var result = props.result, onCheck = props.onCheck, onClear = props.onClear;
+  var boxRef = useRef(null);
+
+  useEffect(function(){
+    if(result && boxRef.current) boxRef.current.scrollIntoView({behavior:"smooth", block:"nearest"});
+  }, [result]);
+
+  var msg = "";
+  if(result){
+    var p = result.pct;
+    if(p >= 90) msg = "Nyaris sempurna. Materi ini boleh kamu tandai selesai.";
+    else if(p >= 80) msg = "Tuntas. Baca lagi pembahasan di soal yang merah supaya makin mantap.";
+    else if(p >= 60) msg = "Hampir. Buka pembahasan tiap soal yang salah, lalu tekan Periksa lagi.";
+    else if(p >= 30) msg = "Balik dulu ke bagian Ringkasan di atas, terutama tabelnya. Setelah itu coba ulang.";
+    else msg = "Santai, ini materi baru. Tonton videonya, baca Ringkasan pelan-pelan, lalu kerjakan lagi.";
+  }
+
+  return h("div", null,
+    h("div", {className:"flex flex-col gap-4"},
+      exList.map(function(it, i){
+        return h(ExItem, {key:i, item:it, idx:i, tid:tid, ans:ans, setAns:setAns,
+          frac: result ? result.fracs[i] : null});
+      })
+    ),
+    h("div", {className:"flex flex-wrap gap-[10px] items-center mt-5"},
+      h("button", {type:"button", className:C.btnPrimary, onClick:onCheck}, "Periksa Jawaban"),
+      h("button", {type:"button", className:C.btnGhost, onClick:onClear}, "Kosongkan latihan ini")
+    ),
+    result ? h("div", {ref:boxRef, role:"status", "aria-live":"polite",
+        className:"mt-[18px] border border-acc dark:border-accD bg-accSoft dark:bg-accSoftD rounded-md p-[17px]"},
+      h("div", {className:"font-display font-extrabold text-[1.9rem] tracking-[-.03em] leading-none text-accInk dark:text-accInkD"},
+        "Nilai " + result.pct + " dari 100"),
+      h("p", {className:"mt-2 text-[.95rem]"}, msg)
+    ) : null
+  );
+}
+
+/* =====================================================================
+   HALAMAN
+   ===================================================================== */
+function Home(props){
+  var best = props.best, go = props.go;
+  var pct = Math.round(TOPICS.reduce(function(a,t){ return a + (best[t.id]||0); }, 0) / TOPICS.length);
+  var done = TOPICS.filter(function(t){ return (best[t.id]||0) >= 80; }).length;
+
+  function TopicCard(t){
+    var b = best[t.id] || 0;
+    var stateCls = b >= 80 ? "bg-okBg dark:bg-okBgD text-ok dark:text-okD border-ok dark:border-okD"
+                 : b > 0   ? "bg-goldBg dark:bg-goldBgD text-gold dark:text-goldD border-goldLine dark:border-goldLineD"
+                           : "text-ink3 dark:text-ink3D border-lineS dark:border-lineSD";
+    var stateTxt = b >= 80 ? "Tuntas · " + b + "%" : (b > 0 ? "Nilai " + b + "%" : "Belum dibuka");
+    return h("button", {key:t.id, type:"button", onClick:function(){ go("#/"+t.id); },
+      className:C.card + " text-left w-full p-4 flex flex-col gap-[9px] cursor-pointer hover:border-acc dark:hover:border-accD hover:-translate-y-[1px] transition"},
+      h("div", {className:"flex items-center gap-[9px]"},
+        h("span", {className:"font-mono text-[.7rem] font-semibold text-acc dark:text-accD bg-accSoft dark:bg-accSoftD rounded px-[7px] py-[3px]"}, t.num),
+        h("span", {className:C.eyebrow}, t.tag),
+        h("span", {className:"ml-auto font-mono text-[.63rem] tracking-[.08em] uppercase font-semibold px-[9px] py-[3px] rounded-full border " + stateCls}, stateTxt)
+      ),
+      h("h3", {className:"font-display font-semibold text-[1.08rem] tracking-[-.01em]"}, t.title),
+      h("p", {className:"text-[.92rem] text-ink2 dark:text-ink2D"}, t.desc),
+      h("div", {className:"flex flex-wrap gap-x-[10px] gap-y-[6px] items-center"},
+        h("span", {className:C.pill}, t.time),
+        h("span", {className:C.pill}, t.ex.length + " latihan"),
+        t.videos.length ? h("span", {className:C.pill}, t.videos.length > 1 ? t.videos.length + " video" : "1 video") : null
+      )
+    );
+  }
+
+  return h("section", null,
+    h("div", {className:"pt-8 sm:pt-11 pb-5"},
+      h("div", {className:"flex flex-wrap gap-x-3 gap-y-[6px] items-center mb-[14px]"},
+        h("span", {className:C.eyebrow}, "SMKN 1 Sewon"),
+        h("span", {className:"w-[5px] h-[5px] rounded-full bg-acc dark:bg-accD"}),
+        h("span", {className:C.eyebrow}, "Bahasa Jerman"),
+        h("span", {className:"w-[5px] h-[5px] rounded-full bg-acc dark:bg-accD"}),
+        h("span", {className:C.eyebrow}, "Kelas XII ULW")
+      ),
+      h("h1", {className:"font-display font-extrabold text-[2rem] sm:text-[3rem] leading-[1.05] tracking-[-.03em]"},
+        "Belajar Jerman ",
+        h("span", {className:"text-acc dark:text-accD"}, "tanpa nunggu jam pelajaran")),
+      h("p", {className:"mt-[13px] text-ink2 dark:text-ink2D text-[1.02rem] sm:text-[1.1rem] max-w-[44ch]"},
+        "Tiap materi dibuka dengan video pengantar, lalu rangkuman singkat, lalu latihan yang langsung dikoreksi. Semua bisa dari HP."),
+      h("div", {className:C.card + " mt-6 p-[18px] flex flex-col gap-[11px]"},
+        h("div", {className:"flex items-baseline justify-between gap-3"},
+          h("span", {className:C.eyebrow}, "Progres kamu"),
+          h("span", {className:"font-display font-extrabold text-[1.5rem] tracking-[-.02em]"}, pct + "%")),
+        h("div", {className:"h-2 rounded-full bg-surf2 dark:bg-surf2D border border-line dark:border-lineD overflow-hidden"},
+          h("div", {className:"h-full bg-acc dark:bg-accD transition-all duration-500", style:{width: pct + "%"}})),
+        h("p", {className:"text-[.88rem] text-ink3 dark:text-ink3D"},
+          done + " dari " + TOPICS.length + " materi sudah tuntas (nilai latihan minimal 80). Progres tersimpan di HP ini.")
+      )
+    ),
+
+    h("div", {className:"flex items-center gap-3 mt-8 mb-[14px]"},
+      h("span", {className:C.eyebrow}, "Daftar materi"),
+      h("span", {className:"flex-1 h-px bg-line dark:bg-lineD"})
+    ),
+    h("div", {className:"grid grid-cols-1 md:grid-cols-2 gap-3"},
+      TOPICS.map(TopicCard),
+
+      h("button", {key:"ch", type:"button", onClick:function(){ go("#/challenge"); },
+        className:C.card + " text-left w-full p-4 flex flex-col gap-[9px] cursor-pointer hover:border-acc dark:hover:border-accD transition"},
+        h("div", {className:"flex items-center gap-[9px]"},
+          h("span", {className:"font-mono text-[.7rem] font-semibold text-gold dark:text-goldD bg-goldBg dark:bg-goldBgD rounded px-[7px] py-[3px]"}, "⚡"),
+          h("span", {className:C.eyebrow}, "Latihan harian")),
+        h("h3", {className:"font-display font-semibold text-[1.08rem]"}, "Daily Challenge"),
+        h("p", {className:"text-[.92rem] text-ink2 dark:text-ink2D"},
+          "Lima soal campuran dari semua materi. Cocok buat pemanasan 5 menit sebelum tidur atau sebelum ulangan."),
+        h("div", {className:"flex flex-wrap gap-x-[10px] gap-y-[6px]"},
+          h("span", {className:C.pill}, "5 soal"),
+          h("span", {className:C.pill}, "≈5 menit"))
+      ),
+
+      h("button", {key:"vc", type:"button", onClick:function(){ go("#/wortschatz"); },
+        className:C.card + " text-left w-full p-4 flex flex-col gap-[9px] cursor-pointer hover:border-acc dark:hover:border-accD transition"},
+        h("div", {className:"flex items-center gap-[9px]"},
+          h("span", {className:"font-mono text-[.7rem] font-semibold text-acc dark:text-accD bg-accSoft dark:bg-accSoftD rounded px-[7px] py-[3px]"}, "A–Z"),
+          h("span", {className:C.eyebrow}, "Referensi")),
+        h("h3", {className:"font-display font-semibold text-[1.08rem]"}, "Wortschatz — Kamus Cepat"),
+        h("p", {className:"text-[.92rem] text-ink2 dark:text-ink2D"},
+          "Semua kosakata dari seluruh materi, lengkap dengan gendernya dan bisa dicari langsung."),
+        h("div", {className:"flex flex-wrap gap-x-[10px] gap-y-[6px]"},
+          h("span", {className:C.pill}, "Cari cepat"),
+          h("span", {className:C.pill}, "90+ kata"))
+      ),
+
+      h("a", {key:"kit", href:KIT_URL, target:"_blank", rel:"noopener",
+        className:C.card + " text-left w-full p-4 flex flex-col gap-[9px] no-underline text-ink dark:text-inkD hover:border-acc dark:hover:border-accD transition"},
+        h("div", {className:"flex items-center gap-[9px]"},
+          h("span", {className:"font-mono text-[.7rem] font-semibold text-gold dark:text-goldD bg-goldBg dark:bg-goldBgD rounded px-[7px] py-[3px]"}, "★"),
+          h("span", {className:C.eyebrow}, "Latihan gabungan")),
+        h("h3", {className:"font-display font-semibold text-[1.08rem]"}, "Akkusativ Survival Kit"),
+        h("p", {className:"text-[.92rem] text-ink2 dark:text-ink2D"},
+          "Paket 10 soal variatif: pilihan ganda, menjodohkan, menyusun kata, sampai esai pendek. Buka setelah semua materi selesai."),
+        h("div", {className:"flex flex-wrap gap-x-[10px] gap-y-[6px]"},
+          h("span", {className:C.pill}, "10 soal"),
+          h("span", {className:C.pill}, "Halaman terpisah"))
+      )
+    )
+  );
+}
+
+function TopicView(props){
+  var t = props.topic, go = props.go;
+  var i = TOPICS.indexOf(t);
+
+  return h("section", null,
+    h("div", {className:"pt-7 sm:pt-9 pb-4 border-b border-line dark:border-lineD"},
+      h("div", {className:"flex flex-wrap gap-x-3 gap-y-[6px] items-center mb-2"},
+        h("span", {className:C.eyebrow}, "Materi " + t.num),
+        h("span", {className:"w-[5px] h-[5px] rounded-full bg-acc dark:bg-accD"}),
+        h("span", {className:C.eyebrow}, t.tag),
+        h("span", {className:"w-[5px] h-[5px] rounded-full bg-acc dark:bg-accD"}),
+        h("span", {className:C.eyebrow}, t.time)
+      ),
+      h("h1", {className:"font-display font-extrabold text-[1.7rem] sm:text-[2.3rem] leading-[1.08] tracking-[-.025em]"}, t.title),
+      h("p", {className:"mt-[11px] text-ink2 dark:text-ink2D max-w-[52ch]"}, t.lede)
+    ),
+
+    /* VIDEO DULU, baru teks */
+    t.videos.length ? h("div", {className:"pt-7"},
+      h("h2", {className:"font-display font-extrabold text-[1.25rem] sm:text-[1.5rem] tracking-[-.02em] mb-1"},
+        t.videos.length > 1 ? "Video Pengantar" : "Video Pengantar"),
+      h("p", {className:"text-ink2 dark:text-ink2D text-[.95rem] mb-4 max-w-[56ch]"},
+        "Tonton dulu videonya biar dapat gambaran. Rangkuman di bawah sudah memuat inti sarinya, jadi kamu tidak perlu menonton ulang tiap kali mengulang materi."),
+      h("div", {className:"flex flex-col gap-5"},
+        t.videos.map(function(v, vi){ return h(VideoBlock, {key:vi, video:v}); }))
+    ) : null,
+
+    h("div", {className:"pt-7"},
+      h("h2", {className:"font-display font-extrabold text-[1.25rem] sm:text-[1.5rem] tracking-[-.02em] mb-1"}, "Rangkuman"),
+      h("p", {className:"text-ink2 dark:text-ink2D text-[.95rem] mb-4 max-w-[56ch]"},
+        "Inti sari dari video, dipadatkan jadi tabel dan poin. Tabelnya bisa digeser ke samping kalau layarmu sempit."),
+      h("div", {className:"flex flex-col gap-4"},
+        t.summary.map(function(s, si){
+          return h("div", {key:si, className:C.card + " p-4 sm:p-5 prose-de"},
+            h("h4", {className:"font-display font-semibold text-[1.02rem] mb-2"}, s.h),
+            h("div", {dangerouslySetInnerHTML:{__html:s.html}})
+          );
+        })
+      )
+    ),
+
+    h("div", {className:"pt-7"},
+      h("h2", {className:"font-display font-extrabold text-[1.25rem] sm:text-[1.5rem] tracking-[-.02em] mb-1"}, "Latihan"),
+      h("p", {className:"text-ink2 dark:text-ink2D text-[.95rem] mb-4 max-w-[56ch]"},
+        t.ex.length + " soal. Kerjakan dulu semuanya, baru tekan Periksa — pembahasan muncul per soal."),
+      h(ExerciseSet, {
+        exList:t.ex, tid:t.id, ans:props.ans, setAns:props.setAns,
+        result:props.result, onCheck:props.onCheck, onClear:props.onClear
+      })
+    ),
+
+    h("div", {className:"flex flex-wrap gap-[10px] mt-9 pt-5 border-t border-line dark:border-lineD"},
+      i > 0 ? h("button", {type:"button", onClick:function(){ go("#/"+TOPICS[i-1].id); },
+        className:C.card + " flex-1 min-w-[200px] text-left px-4 py-[13px] flex flex-col gap-[3px] cursor-pointer hover:border-acc dark:hover:border-accD"},
+        h("span", {className:C.eyebrow}, "Sebelumnya"),
+        h("span", {className:"font-display font-semibold text-[.98rem]"}, TOPICS[i-1].title)) : null,
+      i < TOPICS.length - 1
+        ? h("button", {type:"button", onClick:function(){ go("#/"+TOPICS[i+1].id); },
+            className:C.card + " flex-1 min-w-[200px] text-left px-4 py-[13px] flex flex-col gap-[3px] cursor-pointer hover:border-acc dark:hover:border-accD"},
+            h("span", {className:C.eyebrow}, "Selanjutnya"),
+            h("span", {className:"font-display font-semibold text-[.98rem]"}, TOPICS[i+1].title))
+        : h("button", {type:"button", onClick:function(){ go("#/challenge"); },
+            className:C.card + " flex-1 min-w-[200px] text-left px-4 py-[13px] flex flex-col gap-[3px] cursor-pointer hover:border-acc dark:hover:border-accD"},
+            h("span", {className:C.eyebrow}, "Semua materi selesai"),
+            h("span", {className:"font-display font-semibold text-[.98rem]"}, "Coba Daily Challenge"))
+    )
+  );
+}
+
+function ChallengeView(props){
+  return h("section", null,
+    h("div", {className:"pt-7 sm:pt-9 pb-4 border-b border-line dark:border-lineD"},
+      h("span", {className:C.eyebrow}, "Latihan harian"),
+      h("h1", {className:"font-display font-extrabold text-[1.7rem] sm:text-[2.3rem] leading-[1.08] tracking-[-.025em] mt-2"}, "Daily Challenge"),
+      h("p", {className:"mt-[11px] text-ink2 dark:text-ink2D max-w-[52ch]"}, CHALLENGE.lede)
+    ),
+    h("div", {className:"pt-7"},
+      h(ExerciseSet, {
+        exList:CHALLENGE.ex, tid:CHALLENGE.id, ans:props.ans, setAns:props.setAns,
+        result:props.result, onCheck:props.onCheck, onClear:props.onClear
+      })
+    )
+  );
+}
+
+function Wortschatz(){
+  var st = useState("");
+  var q = st[0], setQ = st[1];
+  var nq = norm(q);
+  var groups = VOCAB.map(function(g){
+    return {g:g.g, items:g.items.filter(function(it){
+      if(!nq) return true;
+      return norm(it[0]).indexOf(nq) > -1 || norm(it[1]).indexOf(nq) > -1;
+    })};
+  }).filter(function(g){ return g.items.length; });
+  var shown = groups.reduce(function(a,g){ return a + g.items.length; }, 0);
+
+  return h("section", null,
+    h("div", {className:"pt-7 sm:pt-9 pb-4 border-b border-line dark:border-lineD"},
+      h("span", {className:C.eyebrow}, "Referensi"),
+      h("h1", {className:"font-display font-extrabold text-[1.7rem] sm:text-[2.3rem] leading-[1.08] tracking-[-.025em] mt-2"}, "Wortschatz — Kamus Cepat"),
+      h("p", {className:"mt-[11px] text-ink2 dark:text-ink2D max-w-[52ch]"},
+        "Ketik kata Jerman atau artinya dalam bahasa Indonesia. Daftar menyaring sendiri sambil kamu mengetik.")
+    ),
+    h("div", {className:"sticky top-[53px] z-20 bg-paper dark:bg-paperD pt-3 pb-[10px] border-b border-line dark:border-lineD"},
+      h("input", {type:"text", value:q, "aria-label":"Cari kosakata",
+        placeholder:"Cari kata… misalnya: tas, trinken, Apfel",
+        onChange:function(e){ setQ(e.target.value); },
+        className:C.input + " !font-sans"}),
+      h("p", {className:"text-[.85rem] text-ink3 dark:text-ink3D mt-2"},
+        shown + " kata ditampilkan" + (nq ? ' untuk "' + q + '"' : ""))
+    ),
+    groups.length ? groups.map(function(g, gi){
+      return h("div", {key:gi, className:"mt-5"},
+        h("h4", {className:"font-mono text-[.66rem] tracking-[.11em] uppercase text-ink3 dark:text-ink3D font-semibold mb-[9px]"}, g.g),
+        h("div", {className:"rounded-md border border-line dark:border-lineD overflow-hidden divide-y divide-line dark:divide-lineD"},
+          g.items.map(function(it, ii){
+            return h("div", {key:ii, className:"grid grid-cols-1 sm:grid-cols-2 gap-x-3 bg-surf dark:bg-surfD px-[13px] py-[9px] items-baseline"},
+              h("span", {className:"font-mono text-[.93rem] font-medium"}, it[0]),
+              h("span", {className:"text-[.9rem] text-ink2 dark:text-ink2D"}, it[1]));
+          }))
+      );
+    }) : h("p", {className:"text-[.9rem] text-ink3 dark:text-ink3D mt-5"},
+      "Tidak ada yang cocok. Coba potongan katanya saja.")
+  );
+}
+
+/* =====================================================================
+   APP
+   ===================================================================== */
+function App(){
+  var s0 = loadStore();
+  var hashState = useState(location.hash);
+  var route = hashState[0], setRoute = hashState[1];
+  var ansState = useState(s0.ans); var ans = ansState[0], setAnsRaw = ansState[1];
+  var bestState = useState(s0.best); var best = bestState[0], setBest = bestState[1];
+  var resState = useState(null); var result = resState[0], setResult = resState[1];
+
+  useEffect(function(){
+    function onHash(){ setRoute(location.hash); setResult(null); window.scrollTo(0,0); }
+    window.addEventListener("hashchange", onHash);
+    return function(){ window.removeEventListener("hashchange", onHash); };
+  }, []);
+
+  useEffect(function(){ saveStore({ans:ans, best:best}); }, [ans, best]);
+
+  function setAns(key, val){
+    setAnsRaw(function(prev){ var n = {}; for(var k in prev) n[k] = prev[k]; n[key] = val; return n; });
+  }
+  function go(hash){
+    if(location.hash === hash){ setRoute(hash); setResult(null); window.scrollTo(0,0); }
+    else location.hash = hash;
+  }
+
+  var key = route.replace(/^#\/?/, "");
+  var topic = null;
+  TOPICS.forEach(function(t){ if(t.id === key) topic = t; });
+  var isChallenge = key === "challenge";
+  var isVocab = key === "wortschatz";
+  var atHome = !topic && !isChallenge && !isVocab;
+
+  function doCheck(exList, tid, isTopic){
+    var r = scoreSet(exList, tid, ans);
+    setResult(r);
+    if(isTopic){
+      setBest(function(prev){
+        if((prev[tid]||0) >= r.pct) return prev;
+        var n = {}; for(var k in prev) n[k] = prev[k]; n[tid] = r.pct; return n;
+      });
+    }
+  }
+  function doClear(exList, tid, isTopic){
+    setAnsRaw(function(prev){
+      var n = {};
+      for(var k in prev){ if(k.indexOf("in-" + tid + "-") !== 0) n[k] = prev[k]; }
+      return n;
+    });
+    if(isTopic){
+      setBest(function(prev){ var n = {}; for(var k in prev){ if(k !== tid) n[k] = prev[k]; } return n; });
+    }
+    setResult(null);
+    window.scrollTo(0,0);
+  }
+
+  var overall = Math.round(TOPICS.reduce(function(a,t){ return a + (best[t.id]||0); }, 0) / TOPICS.length);
+
+  var page;
+  if(topic){
+    page = h(TopicView, {topic:topic, go:go, ans:ans, setAns:setAns, result:result,
+      onCheck:function(){ doCheck(topic.ex, topic.id, true); },
+      onClear:function(){ doClear(topic.ex, topic.id, true); }});
+  } else if(isChallenge){
+    page = h(ChallengeView, {ans:ans, setAns:setAns, result:result,
+      onCheck:function(){ doCheck(CHALLENGE.ex, CHALLENGE.id, false); },
+      onClear:function(){ doClear(CHALLENGE.ex, CHALLENGE.id, false); }});
+  } else if(isVocab){
+    page = h(Wortschatz, null);
+  } else {
+    page = h(Home, {best:best, go:go});
+  }
+
+  return h("div", null,
+    h("header", {className:"sticky top-0 z-40 bg-paper dark:bg-paperD border-b border-line dark:border-lineD shadow-[0_6px_14px_-12px_rgba(0,0,0,.5)]"},
+      h("div", {className:"max-w-[56rem] mx-auto px-4 sm:px-7 py-[9px] flex items-center gap-3 min-h-[52px]"},
+        h("button", {type:"button", onClick:function(){ go("#/"); },
+          className:"flex items-center gap-[9px] font-display font-extrabold tracking-[-.02em] text-base bg-transparent border-0 cursor-pointer text-ink dark:text-inkD p-0"},
+          h("span", {className:"w-6 h-6 rounded-[5px] bg-acc dark:bg-accD grid place-items-center text-white dark:text-[#08201F] font-mono text-[.7rem] font-semibold"}, "DE"),
+          h("span", null, "Deutschklasse XII ULW")),
+        h("span", {className:"flex-1"}),
+        h("span", {className:"font-mono text-[.7rem] font-semibold text-accInk dark:text-accInkD bg-accSoft dark:bg-accSoftD rounded-full px-[11px] py-[5px] whitespace-nowrap"},
+          overall + "%"),
+        atHome ? null : h("button", {type:"button", onClick:function(){ go("#/"); },
+          className:"flex items-center gap-[6px] bg-transparent border border-lineS dark:border-lineSD text-ink2 dark:text-ink2D rounded px-3 py-[7px] min-h-[38px] text-[.86rem] font-semibold cursor-pointer hover:bg-surf2 dark:hover:bg-surf2D"},
+          "← Daftar materi")
+      )
+    ),
+    h("div", {className:"max-w-[56rem] mx-auto px-4 sm:px-7 pb-20"},
+      h("main", null, page),
+      h("footer", {className:"mt-12 pt-[18px] border-t border-line dark:border-lineD text-ink3 dark:text-ink3D text-[.85rem] flex flex-col gap-1"},
+        h("span", {className:"font-semibold text-ink2 dark:text-ink2D"}, "Dikembangkan untuk SMKN 1 Sewon | Viel Erfolg, kelas 12!"),
+        h("span", null, "Bahasa Jerman · Kelas XII ULW · Fase F · TP 2026/2027 · Herr Yudha Nur Wicaksono"),
+        h("span", null, "Progresmu tersimpan di HP ini saja, tidak terkirim ke mana-mana.")
+      )
+    )
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+}
+
+bootDeutschklasse(startDeutschklasse);
+</script>
+</body>
+</html>
