@@ -1,4 +1,3 @@
-# deutschklasse
 # Portal Belajar Mandiri — Deutschklasse XII ULW (v2)
 
 **Bahasa Jerman · Kelas XII ULW · SMKN 1 Sewon · Fase F · TP 2026/2027**
@@ -74,3 +73,21 @@ proses build. React 18 (UMD) dan Tailwind dipanggil dari CDN, jadi tidak perlu N
   Deploy from a branch → branch `main`, folder `/ (root)` → Save. Tautan terbit dalam 1–3 menit
   di `https://<username>.github.io/<nama-repo>/`. Memperbarui isi cukup dengan mengunggah ulang
   `index.html` bernama sama.
+
+## Evaluasi Akhir & Sertifikat (v5)
+- Tiap video kini didahului **kalimat pengantar (hook)** 1–2 kalimat, disimpan di field `hook`
+  pada objek video di dalam `TOPICS`.
+- Rute baru `#/evaluasi`: gerbang nama siswa → 5 soal pilihan ganda (satu per materi utama) →
+  skor → sertifikat. Data soal ada di array `EVAL`.
+- Sertifikat memuat nama, skor, tanggal (format Indonesia), "SMKN 1 Sewon", dan nama guru.
+  Digambar dengan gaya sebaris berwarna tetap supaya tampilannya sama di mode terang/gelap dan
+  terekam utuh oleh html2canvas. Ambang tuntas `LULUS_MIN = 60`.
+- Unduh JPG memakai `html2canvas@1.4.1` dari jsDelivr, skala 2–4× menyesuaikan lebar layar.
+- Konstanta `BISA_UNDUH` membedakan kedua versi: `true` di `index.html` (GitHub Pages, unduhan
+  berfungsi), `false` di versi Artifact (unduhan diblokir browser pratinjau, jadi tombolnya
+  diganti petunjuk menyimpan lewat screenshot).
+- Nama siswa dan nilai evaluasi terbaik disimpan di localStorage bersama progres materi;
+  tidak dikirim ke mana pun.
+- **Babel/JSX sengaja tidak dipakai.** React dipanggil sebagai UMD dan komponen ditulis dengan
+  `React.createElement`, karena Babel standalone berukuran ~3 MB dan harus mengompilasi di HP
+  siswa tiap kali halaman dibuka.
